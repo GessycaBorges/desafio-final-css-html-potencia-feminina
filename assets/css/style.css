@@ -1,5 +1,12 @@
+:root {
+    --main-gray: #2D2D36;
+    --secondary-gray: #3b3b3b;
+    --accent-color: #5C6BA2;
+    --main-white: #f4f4f4;
+}
+
 body{
-    background-color: #2D2D36;
+    background-color: var(--main-gray);
 }
 
 .header {
@@ -25,7 +32,7 @@ body{
 
 .header__link:focus {
     outline: none;
-    background-color: #4d4d4d;
+    background-color: var(--secondary-gray);
     border-radius: 5px;
 }
 
@@ -60,7 +67,7 @@ body{
     font-family: 'Damion', cursive;
     font-size: 52px;
     font-weight: 400;
-    color: #5C6BA2;
+    color: var(--accent-color);
     margin: 16px 0;
 }
 
@@ -68,9 +75,48 @@ body{
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
     font-weight: 400;
-    color: #f4f4f4;
+    color: var(--main-white);
     margin: 0;
     width: 100%;
     max-width: 450px;
     text-align: center;
+}
+
+.section{
+    border: 1px solid red;
+    padding: 8px;
+    width: 100%;
+    max-width: 450px;
+    margin: 24px auto;
+}
+
+.section__title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+    color: var(--accent-color);
+}
+
+.project {
+    border: 1px solid red;
+    background-color: var(--secondary-gray);
+    padding: 8px;
+    margin: 16px 0;
+    box-sizing: border-box;
+}
+
+.project__title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--accent-color);
+    margin: 8px 0;
+}
+
+.project__description {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--main-white);
+    margin: 8px 0;
 }
