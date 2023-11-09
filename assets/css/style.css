@@ -1,18 +1,26 @@
 :root {
     --main-gray: #2D2D36;
     --secondary-gray: #3b3b3b;
-    --accent-color: #5C6BA2;
+    --accent-color: #97a7e0;
     --main-white: #f4f4f4;
+
+    --main-font: 'Poppins', sans-serif;
+    --secondary-font: 'Damion', cursive;
 }
 
 body{
     background-color: var(--main-gray);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: var(--main-font);
+    color: var(--main-white);
 }
 
 .header {
-    border: 1px solid red;
     width: 100%;
-    max-width: 900px;
+    max-width: 700px;
     padding: 8px;
     box-sizing: border-box;
     margin: 0 auto;
@@ -40,8 +48,12 @@ body{
     width: 24px;
 }
 
+.icon__text {
+    margin: 0 8px;
+    animation: pulse 1s infinite alternate;
+}
+
 .main {
-    border: 1px solid red;
     width: 100%;
     max-width: 700px;
     padding: 8px;
@@ -50,7 +62,6 @@ body{
 }
 
 .profile {
-    border: 1px solid red;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -61,10 +72,11 @@ body{
     width: 100%;
     max-width: 200px;
     border-radius: 50%;
+    border: 6px solid var(--accent-color);
 }
 
 .profile__name {
-    font-family: 'Damion', cursive;
+    font-family: var(--secondary-font);
     font-size: 52px;
     font-weight: 400;
     color: var(--accent-color);
@@ -72,10 +84,8 @@ body{
 }
 
 .profile__description {
-    font-family: 'Poppins', sans-serif;
     font-size: 16px;
     font-weight: 400;
-    color: var(--main-white);
     margin: 0;
     width: 100%;
     max-width: 450px;
@@ -83,30 +93,29 @@ body{
 }
 
 .section{
-    border: 1px solid red;
     padding: 8px;
     width: 100%;
     max-width: 450px;
     margin: 24px auto;
+    box-sizing: border-box;
 }
 
 .section__title {
-    font-family: 'Poppins', sans-serif;
     font-size: 22px;
     font-weight: 400;
     color: var(--accent-color);
 }
 
 .project {
-    border: 1px solid red;
     background-color: var(--secondary-gray);
     padding: 8px;
     margin: 16px 0;
     box-sizing: border-box;
+    border-radius: 15px;
+
 }
 
 .project__title {
-    font-family: 'Poppins', sans-serif;
     font-size: 18px;
     font-weight: 400;
     color: var(--accent-color);
@@ -114,9 +123,36 @@ body{
 }
 
 .project__description {
-    font-family: 'Poppins', sans-serif;
     font-size: 16px;
     font-weight: 400;
-    color: var(--main-white);
     margin: 8px 0;
+}
+
+.footer {
+    width: 100%;
+    height: 42px;
+    background-color: var(--accent-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    flex-shrink: 0;
+}
+
+.footer__text {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--main-gray);
+    display: flex;
+    align-items: center;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(.8);
+    }
+
+    100% {
+        transform: scale(1.2);
+    }   
 }
