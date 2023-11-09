@@ -88,14 +88,14 @@ body{
     font-weight: 400;
     margin: 0;
     width: 100%;
-    max-width: 450px;
+    max-width: 550px;
     text-align: center;
 }
 
 .section{
     padding: 8px;
     width: 100%;
-    max-width: 450px;
+    max-width: 550px;
     margin: 24px auto;
     box-sizing: border-box;
 }
